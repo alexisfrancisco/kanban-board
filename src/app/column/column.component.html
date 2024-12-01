@@ -1,1 +1,7 @@
-<p>column works!</p>
+<div class="column">
+    <h3>{{ column.name }}</h3>
+    <div cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)">
+      <app-card *ngFor="let task of column.tasks" [task]="task"></app-card>
+    </div>
+  </div>
+  

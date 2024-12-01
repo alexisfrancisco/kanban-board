@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Column, Task } from '../models/task.model';
 
 @Component({
   selector: 'app-column',
-  imports: [],
   templateUrl: './column.component.html',
-  styleUrl: './column.component.scss'
+  styleUrls: ['./column.component.scss']
 })
 export class ColumnComponent {
-
+  @Input() column!: Column;
 }
