@@ -1,4 +1,3 @@
-<div class="board">
-    <app-column *ngFor="let column of columns" [column]="column"></app-column>
-  </div>
-  
+<div cdkDropListGroup class="board">
+  <app-column *ngFor="let column of columns" [column]="column" ></app-column>
+</div>
