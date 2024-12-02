@@ -17,4 +17,10 @@ export class BoardComponent {
     { name: 'In Progress', tasks: [{ id: 1, title: 'Task 3', description: 'Details', status: 'in-progress' }] },
     { name: 'Done', tasks: [] },
   ];
+
+  updateStatus (task: Task, newCol: string): void {
+    console.log("old status: ", task.status);
+    task.status = newCol.toLowerCase().replace(' ', '-'); // converting from column name to status format
+    console.log("new status: ", task.status);
+  }
 }
